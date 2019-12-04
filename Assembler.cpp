@@ -67,11 +67,11 @@ uint16_t TranslateLine(const std::string& line)
 int main(int argc, char * argv[])
 {
 	// First command line argument is the file path
-	//if (argc != 1)
-	//	return EXIT_FAILURE;
+	if (argc != 2)
+		return EXIT_FAILURE;
 
-	//const std::string filePath = argv[1];
-	const std::string filePath = "Test.s";
+	const std::string filePath = argv[1];
+	//const std::string filePath = "Test.s";
 	std::ifstream assemblyFile(filePath);
 
 	std::vector<int16_t> outputVector;
@@ -84,7 +84,7 @@ int main(int argc, char * argv[])
 		while (std::getline(assemblyFile, line))
 		{
 			// If the line is not empty or a comment
-			if (!(line.length() != 0 && line.at(0) == '#'))
+			if (!(line.length() == 0 || line.at(0) == '#'))
 				outputVector.emplace_back(TranslateLine(line));
 			lineNumber++;
 		}
