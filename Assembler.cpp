@@ -100,7 +100,7 @@ int main(int argc, char * argv[])
 	assemblyFile.close();
 
 	std::stringstream outputStream;
-	outputStream << "-- ROM Initialization file\nWIDTH = 10;\nDEPTH = 1024;\nADDRESS_RADIX = HEX;\nDATA_RADIX = HEX;\nCONTENT\nBEGIN" << std::endl;
+	outputStream << "-- ROM Initialization file\nWIDTH = 16;\nDEPTH = 512;\nADDRESS_RADIX = HEX;\nDATA_RADIX = HEX;\nCONTENT\nBEGIN" << std::endl;
 	for (size_t i = 0; i < outputVector.size(); i++)
 	{
 		outputStream << "   " << std::hex << i << " : " << std::hex << outputVector[i] << ";" << std::endl;
