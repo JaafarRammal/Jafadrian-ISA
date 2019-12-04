@@ -12,9 +12,17 @@
 // OUT rs
 // IN dr
 
-std::unordered_map<std::string, uint16_t> opcodeDictionary = { { "ADD", 3 },
-{ "SUB", 4},
-{ "BRZ", 5}};
+std::unordered_map<std::string, uint16_t> opcodeDictionary = { { "ADD", 2 },
+{ "SUB", 3 },
+{ "AND", 4 },
+{ "OR", 5 },
+{ "XOR", 6 },
+{ "SL", 7 },
+{ "SR", 8 },
+{ "SA", 9},
+{ "BG", 10 },
+{ "BL", 11 },
+{ "BE", 12 } };
 
 uint16_t TranslateLine(const std::string& line)
 {
@@ -37,15 +45,17 @@ uint16_t TranslateLine(const std::string& line)
 	}
 	else if (instructionName == "IN" || instructionName == "OUT")
 	{
-		uint16_t opcode, rd;
+		uint16_t opcode, rd, operation;
+		opcode = 1;
+
 		if (instructionName == "IN")
-			opcode = 1;
+			operation = 1;
 		else
-			opcode = 2;
+			operation = 0;
 		iss >> rd;
 		if (rd > 15)
 			throw std::runtime_error("Destination register must be between 0 and 15");
-		instructionBinary = (opcode << 12) | (rd << 8);
+		instructionBinary = (opcode << 12) | (rd << 8) | operation;
 	}
 	else
 	{
