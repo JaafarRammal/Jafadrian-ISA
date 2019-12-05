@@ -1,0 +1,6 @@
+
+State Machine - |jarianISA_top|ALU:comb_4|state
+Name state.RUN state.INPUT state.HOLD 
+state.RUN 0 0 0 
+state.HOLD 1 0 1 
+state.INPUT 1 1 0 

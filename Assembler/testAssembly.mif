@@ -1,0 +1,17 @@
+-- ROM Initialization file
+WIDTH = 16;
+DEPTH = 512;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+   0 : 405;
+   1 : 204;
+   2 : 101;
+   3 : 25f1;
+   4 : 2332;
+   5 : 3441;
+   6 : a540;
+   7 : 1300;
+   8 : 1701;
+END

@@ -118,7 +118,7 @@ int main(int argc, char * argv[])
 	outputStream << "END";
 
 	// Write output binary file
-	std::ofstream binaryFile(filePath + ".bin");
+	std::ofstream binaryFile(filePath + ".mif");
 	binaryFile << outputStream.rdbuf();
 	binaryFile.close();
 

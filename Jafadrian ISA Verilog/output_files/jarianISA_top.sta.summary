@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'div_by_N:comb_3|out_tick'
+Slack : -9.190
+TNS   : -2292.492
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -2.133
+TNS   : -47.778
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'div_by_N:comb_3|out_tick'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'div_by_N:comb_3|out_tick'
+Slack : -2.174
+TNS   : -224.397
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.564
+TNS   : -16.551
+
+Type  : Slow 1100mV 0C Model Setup 'div_by_N:comb_3|out_tick'
+Slack : -9.186
+TNS   : -2293.053
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.378
+TNS   : -48.360
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'div_by_N:comb_3|out_tick'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'div_by_N:comb_3|out_tick'
+Slack : -2.174
+TNS   : -202.436
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.621
+TNS   : -15.416
+
+Type  : Fast 1100mV 85C Model Setup 'div_by_N:comb_3|out_tick'
+Slack : -5.376
+TNS   : -1359.454
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -0.908
+TNS   : -17.491
+
+Type  : Fast 1100mV 85C Model Hold 'div_by_N:comb_3|out_tick'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.205
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'div_by_N:comb_3|out_tick'
+Slack : -2.174
+TNS   : -48.538
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.703
+TNS   : -11.957
+
+Type  : Fast 1100mV 0C Model Setup 'div_by_N:comb_3|out_tick'
+Slack : -4.974
+TNS   : -1253.177
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -0.891
+TNS   : -14.259
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'div_by_N:comb_3|out_tick'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'div_by_N:comb_3|out_tick'
+Slack : -2.174
+TNS   : -41.455
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.763
+TNS   : -14.230
+
+------------------------------------------------------------

@@ -1,0 +1,24 @@
+module div_by_N(clock, enable, N, out_tick);
+	
+	parameter N_BIT = 16;
+	
+	input clock, enable;
+	input [N_BIT-1 : 0] N;
+	output out_tick;
+	
+	reg [N_BIT-1 : 0] count;
+	reg out_tick;
+	
+	initial out_tick = 1'b0;
+	
+	always @ (posedge clock)
+		if (enable == 1'b1)
+			if (count == 0) begin
+				count <= N;
+				out_tick = 1'b1;
+			end
+			else begin
+				count <= count - 1;
+				out_tick <= 1'b0;
+			end
+endmodule
