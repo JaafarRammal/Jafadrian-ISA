@@ -1,5 +1,5 @@
 Analysis & Synthesis report for jarianISA_top
-Thu Dec 05 01:03:27 2019
+Thu Dec 05 01:25:25 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,7 +19,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_ptm1:auto_generated
+ 14. Source assignments for ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_8vh1:auto_generated
  15. Parameter Settings for User Entity Instance: div_by_N:comb_3
  16. Parameter Settings for User Entity Instance: ROM:instructionROM|altsyncram:altsyncram_component
  17. Parameter Settings for User Entity Instance: ALU:comb_4
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 05 01:03:27 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 05 01:25:25 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; jarianISA_top                               ;
 ; Top-level Entity Name           ; jarianISA_top                               ;
@@ -181,28 +181,28 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                 ;
-+-----------------------------------------------------------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                                        ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                            ; Library ;
-+-----------------------------------------------------------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; jarianISA_top.v                                                                         ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v        ;         ;
-; alu.v                                                                                   ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/alu.v                  ;         ;
-; ROM.v                                                                                   ; yes             ; User Wizard-Generated File             ; C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/ROM.v                  ;         ;
-; hex_to_7seg.v                                                                           ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/hex_to_7seg.v          ;         ;
-; div_by_N.v                                                                              ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/div_by_N.v             ;         ;
-; altsyncram.tdf                                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;         ;
-; stratix_ram_block.inc                                                                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;         ;
-; lpm_mux.inc                                                                             ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;         ;
-; lpm_decode.inc                                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;         ;
-; aglobal181.inc                                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                   ;         ;
-; a_rdenreg.inc                                                                           ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;         ;
-; altrom.inc                                                                              ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                       ;         ;
-; altram.inc                                                                              ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                       ;         ;
-; altdpram.inc                                                                            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;         ;
-; db/altsyncram_ptm1.tdf                                                                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/db/altsyncram_ptm1.tdf ;         ;
-; ../../../../Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/testAssembly.mif ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/testAssembly.mif                             ;         ;
-+-----------------------------------------------------------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; jarianISA_top.v                  ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v        ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/alu.v                  ;         ;
+; ROM.v                            ; yes             ; User Wizard-Generated File             ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/ROM.v                  ;         ;
+; hex_to_7seg.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/hex_to_7seg.v          ;         ;
+; div_by_N.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/div_by_N.v             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                       ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;         ;
+; db/altsyncram_8vh1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/db/altsyncram_8vh1.tdf ;         ;
+; ../Assembler/testAssembly.mif    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Assembler/testAssembly.mif                   ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -243,7 +243,7 @@ refer to the applicable agreement for further details.
 ;    |ALU:comb_4|                           ; 646 (646)           ; 276 (276)                 ; 0                 ; 0          ; 0    ; 0            ; |jarianISA_top|ALU:comb_4                                                                        ; ALU             ; work         ;
 ;    |ROM:instructionROM|                   ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |jarianISA_top|ROM:instructionROM                                                                ; ROM             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |jarianISA_top|ROM:instructionROM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;          |altsyncram_ptm1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |jarianISA_top|ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_ptm1:auto_generated ; altsyncram_ptm1 ; work         ;
+;          |altsyncram_8vh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |jarianISA_top|ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_8vh1:auto_generated ; altsyncram_8vh1 ; work         ;
 ;    |div_by_N:comb_3|                      ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |jarianISA_top|div_by_N:comb_3                                                                   ; div_by_N        ; work         ;
 ;    |hex_to_7seg:comb_10|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |jarianISA_top|hex_to_7seg:comb_10                                                               ; hex_to_7seg     ; work         ;
 ;    |hex_to_7seg:comb_7|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |jarianISA_top|hex_to_7seg:comb_7                                                                ; hex_to_7seg     ; work         ;
@@ -253,13 +253,13 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                        ;
-+----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------------------------------------------------------------------+
-; Name                                                                                         ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                                                     ;
-+----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------------------------------------------------------------------+
-; ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_ptm1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 16           ; --           ; --           ; 8192 ; ../../../../Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/testAssembly.mif ;
-+----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                              ;
++----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------+
+; Name                                                                                         ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                           ;
++----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------+
+; ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_8vh1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 16           ; --           ; --           ; 8192 ; ../Assembler/testAssembly.mif ;
++----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -375,7 +375,7 @@ Encoding Type:  One-Hot
 
 
 +----------------------------------------------------------------------------------------------------------+
-; Source assignments for ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_ptm1:auto_generated ;
+; Source assignments for ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_8vh1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                         ;
 +---------------------------------+--------------------+------+--------------------------------------------+
@@ -393,64 +393,64 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ROM:instructionROM|altsyncram:altsyncram_component                                               ;
-+------------------------------------+-----------------------------------------------------------------------------------------+----------------+
-; Parameter Name                     ; Value                                                                                   ; Type           ;
-+------------------------------------+-----------------------------------------------------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                                                                       ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                                                                      ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                                                                     ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                                                                      ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                                                                     ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                                                                       ; Untyped        ;
-; OPERATION_MODE                     ; ROM                                                                                     ; Untyped        ;
-; WIDTH_A                            ; 16                                                                                      ; Signed Integer ;
-; WIDTHAD_A                          ; 9                                                                                       ; Signed Integer ;
-; NUMWORDS_A                         ; 512                                                                                     ; Signed Integer ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                                                            ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                                                                    ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                                                                    ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                                                                    ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                                                                    ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                                                                    ; Untyped        ;
-; WIDTH_B                            ; 1                                                                                       ; Untyped        ;
-; WIDTHAD_B                          ; 1                                                                                       ; Untyped        ;
-; NUMWORDS_B                         ; 1                                                                                       ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                                                                  ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                                                  ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                                                                  ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK1                                                                                  ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                                                            ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                                                                  ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                                                                    ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                                                                    ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                                                                    ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                                                                    ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                                                                    ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                                                                    ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                                                                       ; Signed Integer ;
-; WIDTH_BYTEENA_B                    ; 1                                                                                       ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                                                                    ; Untyped        ;
-; BYTE_SIZE                          ; 8                                                                                       ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                               ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                                                    ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                                                    ; Untyped        ;
-; INIT_FILE                          ; ../../../../Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/testAssembly.mif ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                                                                  ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                                                                       ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                                                                                  ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                                                  ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                                                                  ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                                                  ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                                                         ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                                                         ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                                                                   ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                                                   ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                                                                       ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone V                                                                               ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_ptm1                                                                         ; Untyped        ;
-+------------------------------------+-----------------------------------------------------------------------------------------+----------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:instructionROM|altsyncram:altsyncram_component ;
++------------------------------------+-------------------------------+----------------------------+
+; Parameter Name                     ; Value                         ; Type                       ;
++------------------------------------+-------------------------------+----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                             ; Untyped                    ;
+; AUTO_CARRY_CHAINS                  ; ON                            ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                           ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS                ; ON                            ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                           ; IGNORE_CASCADE             ;
+; WIDTH_BYTEENA                      ; 1                             ; Untyped                    ;
+; OPERATION_MODE                     ; ROM                           ; Untyped                    ;
+; WIDTH_A                            ; 16                            ; Signed Integer             ;
+; WIDTHAD_A                          ; 9                             ; Signed Integer             ;
+; NUMWORDS_A                         ; 512                           ; Signed Integer             ;
+; OUTDATA_REG_A                      ; UNREGISTERED                  ; Untyped                    ;
+; ADDRESS_ACLR_A                     ; NONE                          ; Untyped                    ;
+; OUTDATA_ACLR_A                     ; NONE                          ; Untyped                    ;
+; WRCONTROL_ACLR_A                   ; NONE                          ; Untyped                    ;
+; INDATA_ACLR_A                      ; NONE                          ; Untyped                    ;
+; BYTEENA_ACLR_A                     ; NONE                          ; Untyped                    ;
+; WIDTH_B                            ; 1                             ; Untyped                    ;
+; WIDTHAD_B                          ; 1                             ; Untyped                    ;
+; NUMWORDS_B                         ; 1                             ; Untyped                    ;
+; INDATA_REG_B                       ; CLOCK1                        ; Untyped                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                        ; Untyped                    ;
+; RDCONTROL_REG_B                    ; CLOCK1                        ; Untyped                    ;
+; ADDRESS_REG_B                      ; CLOCK1                        ; Untyped                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED                  ; Untyped                    ;
+; BYTEENA_REG_B                      ; CLOCK1                        ; Untyped                    ;
+; INDATA_ACLR_B                      ; NONE                          ; Untyped                    ;
+; WRCONTROL_ACLR_B                   ; NONE                          ; Untyped                    ;
+; ADDRESS_ACLR_B                     ; NONE                          ; Untyped                    ;
+; OUTDATA_ACLR_B                     ; NONE                          ; Untyped                    ;
+; RDCONTROL_ACLR_B                   ; NONE                          ; Untyped                    ;
+; BYTEENA_ACLR_B                     ; NONE                          ; Untyped                    ;
+; WIDTH_BYTEENA_A                    ; 1                             ; Signed Integer             ;
+; WIDTH_BYTEENA_B                    ; 1                             ; Untyped                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                          ; Untyped                    ;
+; BYTE_SIZE                          ; 8                             ; Untyped                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                     ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ          ; Untyped                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ          ; Untyped                    ;
+; INIT_FILE                          ; ../Assembler/testAssembly.mif ; Untyped                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A                        ; Untyped                    ;
+; MAXIMUM_DEPTH                      ; 0                             ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                        ; Untyped                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                        ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                        ; Untyped                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                        ; Untyped                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN               ; Untyped                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN               ; Untyped                    ;
+; ENABLE_ECC                         ; FALSE                         ; Untyped                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                         ; Untyped                    ;
+; WIDTH_ECCSTATUS                    ; 3                             ; Untyped                    ;
+; DEVICE_FAMILY                      ; Cyclone V                     ; Untyped                    ;
+; CBXI_PARAMETER                     ; altsyncram_8vh1               ; Untyped                    ;
++------------------------------------+-------------------------------+----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -562,7 +562,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -572,37 +572,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 05 01:03:11 2019
+    Info: Processing started: Thu Dec 05 01:25:10 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off jarianISA -c jarianISA_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file jarianisa_top.v
-    Info (12023): Found entity 1: jarianISA_top File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 3
+    Info (12023): Found entity 1: jarianISA_top File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/alu.v Line: 3
+    Info (12023): Found entity 1: ALU File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/alu.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
-    Info (12023): Found entity 1: ROM File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/ROM.v Line: 39
+    Info (12023): Found entity 1: ROM File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/ROM.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg.v
-    Info (12023): Found entity 1: hex_to_7seg File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/hex_to_7seg.v Line: 3
+    Info (12023): Found entity 1: hex_to_7seg File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/hex_to_7seg.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file div_by_n.v
-    Info (12023): Found entity 1: div_by_N File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/div_by_N.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(16): instance has no name File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 16
-Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(32): instance has no name File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 32
-Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(34): instance has no name File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 34
-Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(35): instance has no name File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 35
-Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(36): instance has no name File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 36
-Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(37): instance has no name File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 37
+    Info (12023): Found entity 1: div_by_N File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/div_by_N.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(16): instance has no name File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(32): instance has no name File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(34): instance has no name File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(35): instance has no name File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(36): instance has no name File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at jarianISA_top.v(37): instance has no name File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 37
 Info (12127): Elaborating entity "jarianISA_top" for the top level hierarchy
-Info (12128): Elaborating entity "div_by_N" for hierarchy "div_by_N:comb_3" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 16
-Warning (10230): Verilog HDL assignment warning at div_by_N.v(21): truncated value with size 32 to match size of target (16) File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/div_by_N.v Line: 21
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:instructionROM" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 22
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:instructionROM|altsyncram:altsyncram_component" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/ROM.v Line: 81
-Info (12130): Elaborated megafunction instantiation "ROM:instructionROM|altsyncram:altsyncram_component" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/ROM.v Line: 81
-Info (12133): Instantiated megafunction "ROM:instructionROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/ROM.v Line: 81
+Info (12128): Elaborating entity "div_by_N" for hierarchy "div_by_N:comb_3" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 16
+Warning (10230): Verilog HDL assignment warning at div_by_N.v(21): truncated value with size 32 to match size of target (16) File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/div_by_N.v Line: 21
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:instructionROM" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 22
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:instructionROM|altsyncram:altsyncram_component" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/ROM.v Line: 81
+Info (12130): Elaborated megafunction instantiation "ROM:instructionROM|altsyncram:altsyncram_component" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/ROM.v Line: 81
+Info (12133): Instantiated megafunction "ROM:instructionROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/ROM.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "../../../../Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/testAssembly.mif"
+    Info (12134): Parameter "init_file" = "../Assembler/testAssembly.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone V"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -613,37 +613,37 @@ Info (12133): Instantiated megafunction "ROM:instructionROM|altsyncram:altsyncra
     Info (12134): Parameter "widthad_a" = "9"
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ptm1.tdf
-    Info (12023): Found entity 1: altsyncram_ptm1 File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/db/altsyncram_ptm1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_ptm1" for hierarchy "ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_ptm1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (113028): 503 out of 512 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/testAssembly.mif Line: 1
-    Warning (113027): Addresses ranging from 9 to 511 are not initialized File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/testAssembly.mif Line: 1
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:comb_4" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 32
-Warning (10855): Verilog HDL warning at alu.v(28): initial value for variable reg_file should be constant File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/alu.v Line: 28
-Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:comb_7" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8vh1.tdf
+    Info (12023): Found entity 1: altsyncram_8vh1 File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/db/altsyncram_8vh1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_8vh1" for hierarchy "ROM:instructionROM|altsyncram:altsyncram_component|altsyncram_8vh1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113028): 501 out of 512 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Assembler/testAssembly.mif Line: 1
+    Warning (113027): Addresses ranging from 11 to 511 are not initialized File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Assembler/testAssembly.mif Line: 1
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:comb_4" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 32
+Warning (10855): Verilog HDL warning at alu.v(28): initial value for variable reg_file should be constant File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/alu.v Line: 28
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:comb_7" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 34
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/output_files/jarianISA_top.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/output_files/jarianISA_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 6
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/jarianISA_top.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 6
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/jarianISA_top.v Line: 6
 Info (21057): Implemented 1005 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 38 output pins
     Info (21061): Implemented 936 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4824 megabytes
-    Info: Processing ended: Thu Dec 05 01:03:27 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Thu Dec 05 01:25:25 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/output_files/jarianISA_top.map.smsg.
+The suppressed messages can be found in C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/output_files/jarianISA_top.map.smsg.
 
 

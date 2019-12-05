@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(5CSEMA5) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/Adrian/OneDrive - Imperial College London/Second Year/Digital Electronics/Jafadrian ISA/output_files/") File("jarianISA_top.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/Adrian/Desktop/Imperial College/Year 2/JafadrianISA/Jafadrian-ISA/Jafadrian ISA Verilog/output_files/") File("jarianISA_top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
