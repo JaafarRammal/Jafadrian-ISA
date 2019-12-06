@@ -1,7 +1,16 @@
 
+
 # Jafadrian-ISA
 
+### Description
+
 Jafadrian-ISA is an afternoon project initially triggered by our curiosity to build a CPU on a FPGA board. Our project can be broken into 3 different parts. First, we designed our custom 16-bit ISA, then we built an assembler for our ISA with C++, and finally we built the CPU on a Cyclone V FPGA with Quartus and Verilog
+
+### Authors
+
+Adrian Koch ([github link](https://github.com/AdrianKoch3010))
+Christoph Renschler ([github linke](https://github.com/crsren))
+Jaafar Rammal ([githublink](https://github.com/JaafarRammal))
 
 ## ISA
 
@@ -26,6 +35,8 @@ The instructions defined are as follow (ascending 4-bit opcode order):
 11 Branch on lower: 		BL	RA 	RS1	RS2
 12 Branch on equal: 		BE	RA 	RS1	RS2
 ```
+
+>Unless the operation is a branch, the PC is always incremented after an instruction's execution. This is not shown in the below definitions
 
 ### Load Immediate
 
@@ -195,7 +206,7 @@ Opcode:	1010
 RA: Address register (4 bits)
 RS1: Comparaison left operand (4 bits)
 RS2: Comparaison right operand (4 bits)
-Operation: PC <- RS1 > RS2 ? RA : PC + 4
+Operation: PC <- RS1 > RS2 ? RA : PC + 1
 ```
 
 
@@ -209,7 +220,7 @@ Opcode:	1011
 RA: Address register (4 bits)
 RS1: Comparaison left operand (4 bits)
 RS2: Comparaison right operand (4 bits)
-Operation: PC <- RS1 < RS2 ? RA : PC + 4
+Operation: PC <- RS1 < RS2 ? RA : PC + 1
 ```
 
 ### Branch on equal
@@ -222,6 +233,33 @@ Opcode:	1100
 RA: Address register (4 bits)
 RS1: Comparaison left operand (4 bits)
 RS2: Comparaison right operand (4 bits)
-Operation: PC <- RS1 == RS2 ? RA : PC + 4
+Operation: PC <- RS1 == RS2 ? RA : PC + 1
 ```
+
+## Assembler
+
+Once the ISA was defined, we needed an assembler that would translate our assembly into binaries. We built a C++ assembler that reads an assembly file, decodes the instructions, and finds the correspondent binaries. These are written to a .mif file that will be used to initialize the FPGA ROM
+
+### Decoding
+
+The assembler is very flexible as it uses a dictionary mapping the assembly instructions to the corresponding opcode and number of operands. We have three different types of opcodes: single operand (IO operations), two operands (immediate operations), and three operands (all other operations)
+
+> Example of three operands flexible dictionary
+```
+opcodeDictionary = {
+	{ "ADD", 2 },
+	{ "SUB", 3 },
+	{ "AND", 4 },
+	{ "OR", 5 },
+	{ "XOR", 6 },
+	{ "SL", 7 },
+	{ "SR", 8 },
+	{ "SA", 9 },
+	{ "BG", 10 },
+	{ "BL", 11 },
+	{ "BE", 12 }
+};
+```
+
+The assembler commits comments. It also handles exceptions for incoherent assembly code (undefined instruction, out-of-range register index, invalid operands count, etc...)
 
