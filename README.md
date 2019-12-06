@@ -21,10 +21,10 @@ The instructions defined are as follow (ascending 4-bit opcode order):
 06 Bitwise XOR: 		XOR	RD 	RS1	RS2
 07 Left shift: 			SL	RD 	RS1	RV
 08 Right shift: 		SR	RD 	RS1	RV
-09 Arithmetic shift:	SA	RD 	RS1 RV
-10 Branch on greater: 	BG	RD 	RS1 RS2
-11 Branch on lower:	 	RD 	RS1 RS2
-12 Branch on equal: 	BE	RD 	RS1 RS2
+09 Arithmetic shift:		SA	RD 	RS1	RV
+10 Branch on greater: 		BG	RD 	RS1	RS2
+11 Branch on lower:	 		BL	RD 	RS1 RS2
+12 Branch on equal: 		BE	RD 	RS1	RS2
 ```
 
 ### Load Immediate
