@@ -8,9 +8,9 @@ Jafadrian-ISA is an afternoon project initially triggered by our curiosity to bu
 
 ### Authors
 
-Adrian Koch ([github link](https://github.com/AdrianKoch3010))
-Christoph Renschler ([github linke](https://github.com/crsren))
-Jaafar Rammal ([githublink](https://github.com/JaafarRammal))
+Adrian Koch ([github link](https://github.com/AdrianKoch3010)) 
+Christoph Renschler ([github link](https://github.com/crsren)) 
+Jaafar Rammal ([github link](https://github.com/JaafarRammal)) 
 
 ## ISA
 
@@ -261,5 +261,20 @@ opcodeDictionary = {
 };
 ```
 
-The assembler commits comments. It also handles exceptions for incoherent assembly code (undefined instruction, out-of-range register index, invalid operands count, etc...)
+The assembler ommits comments. It also handles exceptions for incoherent assembly code (undefined instruction, out-of-range register index, invalid operands count, etc...)
 
+### Future work
+
+Our next step from a software perspective is to implement a compiler for our ISA, which will allow us to implement a basic OS in the future and run it on out CPU on the FPGA
+
+## Verilog and FPGA implementation
+
+Now that we have a nice 16-bit ISA and an assembler to build binary instructions, we dive into implementing the CPU on a FPGA board. We used a Cyclone V provided by our university, and built out design using Quartus Prime.
+
+### Design
+
+The design selects the ROM address using the PC register (program counter) to fetch the corresponding instruction. Afterwards, we use wires to read the opcode, registers, and immediate / IO operation fields. We switch over the opcode to select which instruction has to be executed, and update the registers (including the program counter) accordingly. In the case of an IN operation, the LEDs go on signaling an input is required, and we hold the PC incrementation until the user validates the input termination (using KEY[0] on the FPGA). The value created vy the switches (SW[9:0]) is then written back to the corresponding register, and the process resumes normally. For the output, the destination register value is displayed on the 7 segment HEX blocks on the FPGA. Our model operates with 50MHz clock (FPGA limit) with one cycle per instruction.
+
+### Future work
+
+Our next step from a hardware perspective is to implement a fast and optimized memory to support memory instructions. This will allow us to expand our I/O functionalities by adding a keyboard read, mouse read, audio input, VGA output, audio output.
