@@ -22,9 +22,9 @@ The instructions defined are as follow (ascending 4-bit opcode order):
 07 Left shift: 			SL	RD 	RS	RV
 08 Right shift: 		SR	RD 	RS	RV
 09 Arithmetic shift:		SA	RD 	RS	RV
-10 Branch on greater: 		BG	RD 	RS1	RS2
-11 Branch on lower: 		BL	RD 	RS1	RS2
-12 Branch on equal: 		BE	RD 	RS1	RS2
+10 Branch on greater: 		BG	RA 	RS1	RS2
+11 Branch on lower: 		BL	RA 	RS1	RS2
+12 Branch on equal: 		BE	RA 	RS1	RS2
 ```
 
 ### Load Immediate
@@ -186,5 +186,42 @@ Operation: RD[15:0] <- RS[15:0] >>> RV[15:0]
 ```
 
 ### Branch on greater
+
+Branch on greater
+
+```
+Assembly: BG RA RS1 RS2
+Opcode:	1010
+RA: Address register (4 bits)
+RS1: Comparaison left operand (4 bits)
+RS2: Comparaison right operand (4 bits)
+Operation: PC <- RS1 > RS2 ? RA : PC + 4
+```
+
+
 ### Branch on lower
+
+Branch on lower
+
+```
+Assembly: BL RA RS1 RS2
+Opcode:	1011
+RA: Address register (4 bits)
+RS1: Comparaison left operand (4 bits)
+RS2: Comparaison right operand (4 bits)
+Operation: PC <- RS1 < RS2 ? RA : PC + 4
+```
+
 ### Branch on equal
+
+Branch on lower
+
+```
+Assembly: BL RA RS1 RS2
+Opcode:	1100
+RA: Address register (4 bits)
+RS1: Comparaison left operand (4 bits)
+RS2: Comparaison right operand (4 bits)
+Operation: PC <- RS1 == RS2 ? RA : PC + 4
+```
+
