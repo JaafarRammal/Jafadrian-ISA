@@ -217,7 +217,7 @@ Operation: PC <- RS1 < RS2 ? RA : PC + 4
 Branch on lower
 
 ```
-Assembly: BL RA RS1 RS2
+Assembly: BE RA RS1 RS2
 Opcode:	1100
 RA: Address register (4 bits)
 RS1: Comparaison left operand (4 bits)
