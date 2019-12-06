@@ -13,7 +13,7 @@ The instructions defined are as follow (ascending 4-bit opcode order):
 
 ```
 00 Load Immediate:		LI	RD 	IM
-01 Input / Output:		IO 	RD 	OP
+01 Input / Output:		IO 	RD
 02 Addition: 			ADD	RD 	RS1	RS2
 03 Subtraction: 		SUB	RD 	RS1	RS2
 04 Bitwise AND: 		AND	RD 	RS1	RS2
@@ -23,7 +23,7 @@ The instructions defined are as follow (ascending 4-bit opcode order):
 08 Right shift: 		SR	RD 	RS	RV
 09 Arithmetic shift:		SA	RD 	RS	RV
 10 Branch on greater: 		BG	RD 	RS1	RS2
-11 Branch on lower: 		BL	RD 	RS1 RS2
+11 Branch on lower: 		BL	RD 	RS1	RS2
 12 Branch on equal: 		BE	RD 	RS1	RS2
 ```
 
@@ -32,7 +32,7 @@ The instructions defined are as follow (ascending 4-bit opcode order):
 Loads an 8-bit immediate in the lowest half of a register
 
 ```
-Sytnax: LI RD IM
+Assembly: LI RD IM
 Opcode:	0000
 RD: Destination register (4 bits)
 IM: Immediate (8 bits)
@@ -40,12 +40,50 @@ Operation: RD[7:0] <- IM[7:0]
 ```
 
 ### Input / Output
+
+I/O operations with the FPGA interface
+
+```
+Assembly: (I/O type) RD
+Binary: Opcode (4 bits), RD (4 bits), I/O Type (8 bits)
+Opcode:	0001
+RD: Destination register (4 bits)
+```
+
+Currently, we support IN and OUT. We can support up to 256 different I/O type operations (keyboard input, mouse input, VGA output, etc...)
+
+#### IN
+
+Load a 10-bit value into lowest 10 bits of register from FPGA switches
+
+```
+Assembly: IN RD
+Opcode:	0001
+I/O Type: XXXXXXXX (8 bits)
+RD: Destination register (4 bits)
+Operation: RD[7:0] <- SW[9:0]
+```
+
+To ensure input is made at the correct time, the IN operation holds the ROM instruction fetching until the user approves the SW[9:0] input using the KEY[0] button on the FPGA (telling the CPU "this is your input")
+
+#### OUT
+
+Display a 16-bit value on the FPGA hex display
+
+```
+Assembly: OUT RD
+Opcode:	0001
+I/O Type: 00000000 (8 bits)
+RD: Destination register displayed (4 bits)
+Operation: Display[15:0] <- RD[15:0]
+```
+
 ### Addition
 
 Add two 16-bit values
 
 ```
-Sytnax: ADD RD RS1 RS2
+Assembly: ADD RD RS1 RS2
 Opcode:	0010
 RD: Sum destination register (4 bits)
 RS1: First addition operand (4 bits)
@@ -58,7 +96,7 @@ Operation: RD[15:0] <- RS1[15:0] + RS2[15:0]
 Subtract two 16-bit values
 
 ```
-Sytnax: SUB RD RS1 RS2
+Assembly: SUB RD RS1 RS2
 Opcode:	0011
 RD: Difference destination register (4 bits)
 RS1: Subtraction minuend (4 bits)
@@ -71,7 +109,7 @@ Operation: RD[15:0] <- RS1[15:0] - RS2[15:0]
 Bit-wise AND two 16-bit values
 
 ```
-Sytnax: AND RD RS1 RS2
+Assembly: AND RD RS1 RS2
 Opcode:	0100
 RD: Result destination register (4 bits)
 RS1: First AND operand (4 bits)
@@ -84,7 +122,7 @@ Operation: RD[15:0] <- RS1[15:0] & RS2[15:0]
 Bit-wise OR two 16-bit values
 
 ```
-Sytnax: OR RD RS1 RS2
+Assembly: OR RD RS1 RS2
 Opcode:	0101
 RD: Result destination register (4 bits)
 RS1: First OR operand (4 bits)
@@ -97,7 +135,7 @@ Operation: RD[15:0] <- RS1[15:0] | RS2[15:0]
 Bit-wise XOR two 16-bit values
 
 ```
-Sytnax: XOR RD RS1 RS2
+Assembly: XOR RD RS1 RS2
 Opcode:	0110
 RD: Result destination register (4 bits)
 RS1: First XOR operand (4 bits)
@@ -108,10 +146,10 @@ Operation: RD[15:0] <- RS1[15:0] ^ RS2[15:0]
 ### Left shift
 
 
-Left shift a 16-bit values
+Left shift a 16-bit value
 
 ```
-Sytnax: SL RD RS RV
+Assembly: SL RD RS RV
 Opcode:	0111
 RD: Result destination register (4 bits)
 RS: Value to be shifted (4 bits)
@@ -122,10 +160,10 @@ Operation: RD[15:0] <- RS[15:0] << RV[15:0]
 ### Right shift
 
 
-Right shift a 16-bit values
+Right shift a 16-bit value
 
 ```
-Sytnax: SL RD RS RV
+Assembly: SR RD RS RV
 Opcode:	1000
 RD: Result destination register (4 bits)
 RS: Value to be shifted (4 bits)
@@ -136,10 +174,10 @@ Operation: RD[15:0] <- RS[15:0] >> RV[15:0]
 ### Arithmetic shift
 
 
-Arithmetic (right) shift a 16-bit values
+Arithmetic (right) shift a 16-bit value
 
 ```
-Sytnax: SL RD RS RV
+Assembly: SA RD RS RV
 Opcode:	1001
 RD: Result destination register (4 bits)
 RS: Value to be shifted (4 bits)
