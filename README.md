@@ -23,7 +23,7 @@ The instructions defined are as follow (ascending 4-bit opcode order):
 08 Right shift: 		SR	RD 	RS1	RV
 09 Arithmetic shift:		SA	RD 	RS1	RV
 10 Branch on greater: 		BG	RD 	RS1	RS2
-11 Branch on lower:	 		BL	RD 	RS1 RS2
+11 Branch on lower:			BL	RD 	RS1 RS2
 12 Branch on equal: 		BE	RD 	RS1	RS2
 ```
 
@@ -46,16 +46,65 @@ Add two 16-bit registers
 
 ```
 Sytnax: ADD RD RS1 RS2
-Opcode:	0000
-RD: Destination register (4 bits)
+Opcode:	0002
+RD: Sum destination register (4 bits)
 RS1: First addition operand (4 bits)
 RS2: Second addition operand (4 bits)
 Operation: RD[15:0] <- RS1[15:0] + RS2[15:0]
 ```
+
 ### Subtraction
+
+Subtract two 16-bit registers
+
+```
+Sytnax: SUB RD RS1 RS2
+Opcode:	0003
+RD: Difference destination register (4 bits)
+RS1: Subtraction minuend (4 bits)
+RS2: Subtraction subtrahend (4 bits)
+Operation: RD[15:0] <- RS1[15:0] - RS2[15:0]
+```
+
 ### Bitwise AND
+
+Bit-wise AND two 16-bit registers
+
+```
+Sytnax: AND RD RS1 RS2
+Opcode:	0004
+RD: Result destination register (4 bits)
+RS1: First AND operand (4 bits)
+RS2: Second AND operand (4 bits)
+Operation: RD[15:0] <- RS1[15:0] & RS2[15:0]
+```
+
 ### Bitwise OR
-### Bitwise XOR
+
+Bit-wise OR two 16-bit registers
+
+```
+Sytnax: OR RD RS1 RS2
+Opcode:	0005
+RD: Result destination register (4 bits)
+RS1: First OR operand (4 bits)
+RS2: Second OR operand (4 bits)
+Operation: RD[15:0] <- RS1[15:0] | RS2[15:0]
+```
+
+### Bitwise OR
+
+Bit-wise XOR two 16-bit registers
+
+```
+Sytnax: XOR RD RS1 RS2
+Opcode:	0005
+RD: Result destination register (4 bits)
+RS1: First XOR operand (4 bits)
+RS2: Second XOR operand (4 bits)
+Operation: RD[15:0] <- RS1[15:0] ^ RS2[15:0]
+```
+
 ### Left shift
 ### Right shift
 ### Arithmetic shift
